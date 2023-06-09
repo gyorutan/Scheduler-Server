@@ -12,7 +12,7 @@ const { getUserProfile } = require("../controllers/user.js");
 
 // Server Home
 router.get("/", async (req, res) => {
-  return res.status(200).json({ Message: "Hello ChatPod Server" });
+  return res.status(200).json({ Message: "Hello Scheduler Server" });
 });
 
 // Get UserProfile
