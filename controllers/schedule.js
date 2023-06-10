@@ -32,10 +32,7 @@ exports.createIndividualSchedule = async (req, res) => {
   try {
     const { currentUser, date, time, createdAt } = req.body;
 
-    console.log(time);
-
     const modifiedTime = time.map(({ value }) => value);
-    console.log(modifiedTime);
 
     const existingSchedules = await Individual.find({
       date: date.value,
@@ -63,12 +60,8 @@ exports.createIndividualSchedule = async (req, res) => {
 exports.createBandSchedule = async (req, res) => {
   try {
     const { currentUser, bandName, date, time, createdAt } = req.body;
-    console.log(date)
-
-    console.log(time);
 
     const modifiedTime = time.map(({ value }) => value);
-    console.log(modifiedTime);
 
     const existingSchedules = await Band.find({
       date: date.value,
